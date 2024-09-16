@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style = "height:2000px">
+
+    <div id = "text">БАЛЛААБЛАЛААБАЛА</div>
+    
+    <!-- задание 1 -->
+    <script>
+        const button = document.createElement("button");
+        button.textContent = "Скрой меня";
+
+        button.onclick = function () {
+            this.hidden = true;
+        };
+
+        document.body.append(button);
+    </script>
+
+    <!-- задание 2 -->
+     <script>
+        const div = document.getElementById("text");
+        const button2 = document.createElement("button");
+        button2.textContent = "Скрой текст";
+
+        button2.onclick = function () {
+        div.hidden = !div.hidden;
+        };
+
+        document.body.append(button2);
+    </script>
+
+    <!-- задание 3 -->
+    <script>
+    function toggleDiv() {
+        const div2 = document.getElementById("text");
+    
+        if (div2.style.display == "none") {
+            div2.style.display = "block";
+        } else {
+            div2.style.display = "none";
+        }
+    }
+    
+    const button3 = document.createElement("button");
+    button3.textContent = "Скрой и покажи";
+    button3.onclick = toggleDiv;
+    
+    document.body.append(button3);
+    </script>
+
+    <!-- задание 4 -->
+    <img src="https://ru.js.cx/clipart/ball.svg" id="ball">
+    <script>
+        const ball = document.getElementById("ball");
+        document.body.onclick = (event) => {
+        const clickPos = event.clientX, clickPosY = event.clientY;
+        ball.style.position = 'absolute';
+        ball.style.left = clickPos + 'px';
+        ball.style.top = clickPosY + 'px';
+}
+    </script>
+
+</body>
+</html>
